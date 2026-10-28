@@ -567,7 +567,7 @@ body.menu-open{overflow:hidden}
 @media (max-width:560px){.foot-grid{grid-template-columns:1fr}}
 
 /* back to top: coin */
-.to-top{overflow:hidden;position:fixed;right:calc(max(18px, env(safe-area-inset-right, 0px)) + 4px);bottom:calc(env(safe-area-inset-bottom,0px) + 22px);z-index:70;width:58px;height:58px;border-radius:50%;border:3px solid #B38F12;padding:0;cursor:pointer;background:radial-gradient(circle at 35% 30%,#FFF08A,#FFD23F 55%,#E0A800);color:#5A4300;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(255,210,63,.6);opacity:0;visibility:hidden;transform:translateY(24px) scale(.85);transition:opacity .5s var(--ease),transform .6s var(--ease),visibility 0s linear .5s,box-shadow .55s var(--ease),border-color .55s var(--ease),color .55s var(--ease)}
+.to-top{overflow:hidden;position:fixed;right:calc(max(18px, env(safe-area-inset-right, 0px)) + 4px);bottom:calc(env(safe-area-inset-bottom,0px) + 64px);z-index:70;width:58px;height:58px;border-radius:50%;border:3px solid #B38F12;padding:0;cursor:pointer;background:radial-gradient(circle at 35% 30%,#FFF08A,#FFD23F 55%,#E0A800);color:#5A4300;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(255,210,63,.6);opacity:0;visibility:hidden;transform:translateY(24px) scale(.85);transition:opacity .5s var(--ease),transform .6s var(--ease),visibility 0s linear .5s,box-shadow .55s var(--ease),border-color .55s var(--ease),color .55s var(--ease)}
 .to-top.show{opacity:1;visibility:visible;transform:none;transition:opacity .5s var(--ease),transform .6s var(--ease),box-shadow .55s var(--ease),border-color .55s var(--ease),color .55s var(--ease)}
 .to-top::before{content:"";position:absolute;inset:-3px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#FF8A80,#FF3B3B 55%,#C21F24);opacity:0;transition:opacity .55s var(--ease)}
 .to-top .arrow{position:relative;z-index:1;transition:color .55s var(--ease)}
@@ -1407,6 +1407,15 @@ a.c-btn:active .cap{transform:translateY(6px);box-shadow:0 0 0 var(--d)}
 .inl{color:var(--cyan);font-weight:600;text-decoration:none;background:linear-gradient(var(--cyan),var(--cyan)) left bottom/0 1.5px no-repeat;transition:background-size .45s var(--ease),color .45s var(--ease)}
 .inl:hover{background-size:100% 1.5px;color:#fff}
 @media (max-width:520px){.marq .nm small{font-size:.42rem;letter-spacing:.06em;white-space:nowrap}.marq .nm b{font-size:1.6rem}}
+
+/* ages: each colour bar sits on top of its own step, on every screen size */
+.diff-steps .dbar{display:block;height:14px;border-radius:3px;margin-bottom:12px;background:linear-gradient(90deg,var(--cyan),var(--yellow))}
+.diff-steps div:nth-child(2) .dbar{background:linear-gradient(90deg,var(--yellow),var(--orange))}
+.diff-steps div:nth-child(3) .dbar{background:linear-gradient(90deg,var(--orange),var(--red))}
+.diff-steps div:nth-child(4) .dbar{background:linear-gradient(90deg,var(--red),#9B82FF)}
+.diff-steps{column-gap:6px}
+.diff-steps>div{padding-right:6px}
+.diff-steps>div{align-content:start}
 
 </style>
 </head>
