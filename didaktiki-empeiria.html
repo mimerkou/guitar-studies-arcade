@@ -1400,6 +1400,15 @@ a.c-btn:active .cap{transform:translateY(6px);box-shadow:0 0 0 var(--d)}
 .inl:hover{background-size:100% 1.5px;color:#fff}
 @media (max-width:520px){.marq .nm small{font-size:.42rem;letter-spacing:.06em;white-space:nowrap}.marq .nm b{font-size:1.6rem}}
 
+/* ages: each colour bar sits on top of its own step, on every screen size */
+.diff-steps .dbar{display:block;height:14px;border-radius:3px;margin-bottom:12px;background:linear-gradient(90deg,var(--cyan),var(--yellow))}
+.diff-steps div:nth-child(2) .dbar{background:linear-gradient(90deg,var(--yellow),var(--orange))}
+.diff-steps div:nth-child(3) .dbar{background:linear-gradient(90deg,var(--orange),var(--red))}
+.diff-steps div:nth-child(4) .dbar{background:linear-gradient(90deg,var(--red),#9B82FF)}
+.diff-steps{column-gap:6px}
+.diff-steps>div{padding-right:6px}
+.diff-steps>div{align-content:start}
+
 </style>
 </head>
 <body>
@@ -1621,12 +1630,11 @@ a.c-btn:active .cap{transform:translateY(6px);box-shadow:0 0 0 var(--d)}
           <p>Έχω διδάξει από παιδιά προσχολικής ηλικίας μέχρι εφήβους και ενήλικες, προσαρμόζοντας κάθε φορά τον τρόπο και το υλικό.</p>
         </div>
         <div class="diff" aria-label="Ηλικίες μαθητών">
-          <div class="diff-bar" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
           <div class="diff-steps">
-            <div><span class="dl" aria-hidden="true">AGE 1</span><strong>Προσχολική</strong><span>Πρώτη επαφή με τη μουσική</span></div>
-            <div><span class="dl" aria-hidden="true">AGE 2</span><strong>Παιδιά</strong><span>Από περίπου 6 ετών</span></div>
-            <div><span class="dl" aria-hidden="true">AGE 3</span><strong>Έφηβοι</strong><span>Μπάντες, στυλ, εξετάσεις</span></div>
-            <div><span class="dl" aria-hidden="true">AGE 4</span><strong>Ενήλικες</strong><span>Ποτέ δεν είναι αργά</span></div>
+            <div><i class="dbar" aria-hidden="true"></i><span class="dl" aria-hidden="true">AGE 1</span><strong>Προσχολική</strong><span>Πρώτη επαφή με τη μουσική</span></div>
+            <div><i class="dbar" aria-hidden="true"></i><span class="dl" aria-hidden="true">AGE 2</span><strong>Παιδιά</strong><span>Από περίπου 6 ετών</span></div>
+            <div><i class="dbar" aria-hidden="true"></i><span class="dl" aria-hidden="true">AGE 3</span><strong>Έφηβοι</strong><span>Μπάντες, στυλ, εξετάσεις</span></div>
+            <div><i class="dbar" aria-hidden="true"></i><span class="dl" aria-hidden="true">AGE 4</span><strong>Ενήλικες</strong><span>Ποτέ δεν είναι αργά</span></div>
           </div>
         </div>
       </div>
