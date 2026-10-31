@@ -1873,7 +1873,7 @@ a.c-btn:active .cap{transform:translateY(6px);box-shadow:0 0 0 var(--d)}
         <p style="margin-top:14px;font-size:.86rem">Προετοιμασία για εξετάσεις με πιστοποίηση London College of Music.</p>
       </div>
     </div>
-    <div class="foot-bottom"><span class="fb-copy">© 2026 Guitar Studies · Γιώργος Κοντολέφας</span><span class="px thanks">THANKS FOR PLAYING <svg aria-hidden="true"><use href="#px-note"/></svg></span><span class="fb-by">Created by <a href="https://michalismerkouris.com/" target="_blank" rel="noopener">Μιχάλης Μερκούρης</a></span></div>
+    <div class="foot-bottom"><span class="fb-copy">© <span data-year>2026</span> Guitar Studies · Γιώργος Κοντολέφας</span><span class="px thanks">THANKS FOR PLAYING <svg aria-hidden="true"><use href="#px-note"/></svg></span><span class="fb-by">Created by <a href="https://michalismerkouris.com/" target="_blank" rel="noopener">Μιχάλης Μερκούρης</a></span></div>
   </div>
 </footer>
 
@@ -1885,6 +1885,8 @@ a.c-btn:active .cap{transform:translateY(6px);box-shadow:0 0 0 var(--d)}
 
 <script>
 (function(){
+  /* footer copyright year follows the visitor's current year */
+  document.querySelectorAll('[data-year]').forEach(function(el){el.textContent=new Date().getFullYear()});
   /* Greek uppercase without accents for every element styled with text-transform: uppercase */
   var map={'Ά':'Α','Έ':'Ε','Ή':'Η','Ί':'Ι','Ό':'Ο','Ύ':'Υ','Ώ':'Ω','ά':'α','έ':'ε','ή':'η','ί':'ι','ό':'ο','ύ':'υ','ώ':'ω','ΐ':'ϊ','ΰ':'ϋ'};
   document.querySelectorAll('.eyebrow,.brand-sub,.mode .tag,.strip dt,.cline small,.site-footer h3,.when.soft,.contour .phrase span,.price-card .lbl,.c-card small').forEach(function(el){
