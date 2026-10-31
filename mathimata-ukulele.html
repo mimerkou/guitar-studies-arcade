@@ -880,31 +880,38 @@ body.menu-open{overflow:hidden}
    headstock with 4 tuning pegs that turn on hover, nut, 4 strings over the neck; sunburst on the face */
 .uku{position:relative;border-radius:30px;background:#0B0918;padding:16px;box-shadow:0 0 0 2px #3A331E,0 0 60px -12px rgba(255,210,63,.5),0 40px 80px -30px #000}
 .uk-top{position:relative;z-index:2;height:156px;border-radius:18px 18px 6px 6px;overflow:hidden;background:radial-gradient(ellipse at 80% 50%,rgba(255,210,63,.12),transparent 60%),linear-gradient(180deg,#2B2140,#1D1633);border:2px solid #4A3A5E}
-.uk-neck{position:absolute;left:calc(3% + 216px);right:0;top:50%;height:76px;margin-top:-38px;background:radial-gradient(circle at 135px 50%,#3A3266 0 7px,transparent 8px) 0 0/270px 100% repeat-x,repeating-linear-gradient(90deg,transparent 0 87px,#C9C3E8 87px 90px),#140F26}
-.uk-head{position:absolute;left:3%;top:50%;width:210px;height:76px;margin-top:-38px;border-radius:38px 12px 12px 38px;background:linear-gradient(180deg,#3A2C52,#1E1736);border:2px solid #5A4A70;box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 0 20px -6px rgba(255,210,63,.5)}
-.uk-head::after{content:"";position:absolute;right:-8px;top:6px;bottom:6px;width:8px;border-radius:2px;background:#F3EFFF;box-shadow:0 0 8px rgba(255,255,255,.5)}
-.uk-head .post{position:absolute;width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#FFF6DA,#C9C3E8 50%,#5A5385);box-shadow:0 0 0 2px #0B0918}
-.uk-head .p1{left:52px;top:10px}.uk-head .p2{left:118px;top:10px}.uk-head .p3{left:52px;bottom:10px}.uk-head .p4{left:118px;bottom:10px}
-.uk-head b{position:absolute;left:26px;top:50%;transform:translateY(-50%);font-family:var(--pixel);font-weight:400;font-size:.45rem;letter-spacing:.08em;color:var(--yellow);text-shadow:0 0 8px rgba(255,210,63,.7)}
-.peg{position:absolute;width:30px;height:24px;border-radius:12px;background:radial-gradient(circle at 40% 35%,#FFF08A,var(--yellow) 55%,#B38F12);box-shadow:0 0 12px rgba(255,210,63,.6);transition:transform 1.3s var(--ease)}
-.peg::after{content:"";position:absolute;left:12px;width:6px;height:10px;background:#C9C3E8}
-.peg.t{top:14px}.peg.t::after{bottom:-8px}
-.peg.b{bottom:14px}.peg.b::after{top:-8px}
-.peg.k1{left:calc(3% + 43px)}.peg.k2{left:calc(3% + 109px)}
-.uku:hover .peg{transform:rotateY(180deg)}
-.uku:hover .peg.k2{transition-delay:.12s}.uku:hover .peg.b.k1{transition-delay:.24s}.uku:hover .peg.b.k2{transition-delay:.36s}
-.uk-strings{position:absolute;left:calc(3% + 216px);right:0;top:50%;height:52px;margin-top:-26px;display:grid;grid-template-rows:repeat(4,1fr);align-items:center}
-.uk-strings i{display:block;height:2px;background:linear-gradient(90deg,#F3EFFF,#FFF6DA);box-shadow:0 0 4px rgba(255,255,255,.4)}
-.uk-strings i:nth-child(2){height:2.4px}.uk-strings i:nth-child(3){height:2.2px}
-.uku:hover .uk-strings i{animation:pluck .08s linear 12 alternate}
-.uku:hover .uk-strings i:nth-child(2n){animation-duration:.1s;animation-iteration-count:10}
 .uk-face{position:relative;margin-top:14px;padding:84px clamp(22px,4vw,56px) clamp(36px,5vw,60px);border-radius:6px 6px 18px 18px;overflow:hidden;background:#17122F;border:3px solid var(--yellow);box-shadow:0 0 18px -4px rgba(255,210,63,.6),inset 0 0 40px rgba(0,0,0,.55)}
 .uk-sun{position:absolute;left:50%;bottom:-260px;width:900px;height:520px;margin-left:-450px;border-radius:50%;background:repeating-conic-gradient(from -90deg,rgba(255,210,63,.08) 0 6deg,transparent 6deg 14deg);-webkit-mask:radial-gradient(circle,#000 30%,transparent 70%);mask:radial-gradient(circle,#000 30%,transparent 70%);transition:transform 1.8s var(--ease)}
 .uku:hover .uk-sun{transform:rotate(14deg)}
 .uk-sun::after{content:"";position:absolute;left:50%;top:50%;width:200px;height:200px;margin:-100px 0 0 -100px;border-radius:50%;background:radial-gradient(circle,rgba(255,159,28,.25),rgba(255,210,63,.08) 60%,transparent 70%)}
 .uk-face .badge{top:20px}
-@media (max-width:760px){.uk-head{width:160px;left:2%}.uk-head .p1{left:40px}.uk-head .p2{left:92px}.uk-head .p3{left:40px}.uk-head .p4{left:92px}.uk-head b{display:none}.peg.k1{left:calc(2% + 31px)}.peg.k2{left:calc(2% + 83px)}.uk-neck,.uk-strings{left:calc(2% + 166px)}}
-@media (max-width:480px){.uku{padding:10px;border-radius:24px}.uk-top{height:136px}.peg.t{top:6px}.peg.b{bottom:6px}.uk-face{padding:78px 18px 26px}}
+@media (max-width:480px){.uku{padding:10px;border-radius:24px}.uk-face{padding:78px 18px 26px}}
+/* ukulele top strip v2: a small, whole ukulele centred */
+.uk2-top{display:flex;align-items:center;justify-content:center;height:170px;padding:0 clamp(16px,3vw,34px)}
+.uk2-inst{flex:none;width:min(560px,62%);height:auto;overflow:visible}
+.uk2-body circle,.uk2-body rect{fill:url(#ukb)}
+.uk2-outline{fill:none;stroke:var(--yellow);stroke-width:3;filter:drop-shadow(0 0 8px rgba(255,210,63,.6))}
+.uk2-hole{fill:#05040C}
+.uk2-ring{fill:none;stroke:var(--orange);stroke-width:3;stroke-dasharray:4 4;transform-box:fill-box;transform-origin:center;transition:transform 1.6s var(--ease)}
+.uku:hover .uk2-ring{transform:rotate(45deg)}
+.uk2-bridge{fill:#120D22;stroke:#5A4A70;stroke-width:2}
+.uk2-neck{fill:#140F26;stroke:#2F2858;stroke-width:2}
+.uk2-fret{stroke:#C9C3E8;stroke-width:2.5;opacity:.8}
+.uk2-dot{fill:#3A3266}
+.uk2-nut{fill:#F3EFFF;filter:drop-shadow(0 0 4px rgba(255,255,255,.5))}
+.uk2-head{fill:#2B2140;stroke:#5A4A70;stroke-width:2}
+.uk2-post{fill:#E6E1FA;stroke:#0B0918;stroke-width:2}
+.uk2-key{fill:var(--yellow);filter:drop-shadow(0 0 6px rgba(255,210,63,.7));transform-box:fill-box;transform-origin:center;transition:transform 1.2s var(--ease)}
+.uku:hover .uk2-key{transform:scaleX(-1) rotate(180deg)}
+.uku:hover .uk2-peg:nth-of-type(2) .uk2-key{transition-delay:.1s}
+.uk2-str{stroke:#FFF6DA;stroke-width:1.6;opacity:.9}
+.uk2-str.s1,.uk2-str.s2{stroke-width:2}
+.uku:hover .uk2-str.v{animation:ukpl .08s linear 12 alternate}
+.uku:hover .uk2-str.v.s1{animation-duration:.1s;animation-iteration-count:10}
+.uku:hover .uk2-str.v.s3{animation-duration:.09s}
+@keyframes ukpl{from{transform:translateY(-1px)}to{transform:translateY(1px)}}
+@media (max-width:980px){.uk2-inst{width:min(560px,100%)}}
+@media (max-width:480px){.uk2-top{height:auto;padding:16px 10px}}
 
 /* ================= Online page ================= */
 .pg-on{--acc:#9B82FF;--acc-g:rgba(123,92,255,.6);--acc-s:rgba(123,92,255,.18);--acc-d:#4B32C8}
@@ -1817,12 +1824,7 @@ a.c-btn:active .cap{transform:translateY(6px);box-shadow:0 0 0 var(--d)}
   <section class="cta" id="epikoinonia" aria-labelledby="cta-h">
     <div class="wrap">
      <div class="uku">
-      <div class="uk-top" aria-hidden="true">
-        <span class="uk-neck"></span>
-        <span class="uk-head"><span class="post p1"></span><span class="post p2"></span><span class="post p3"></span><span class="post p4"></span><b>UKULELE</b></span>
-        <span class="peg t k1"></span><span class="peg t k2"></span><span class="peg b k1"></span><span class="peg b k2"></span>
-        <span class="uk-strings"><i></i><i></i><i></i><i></i></span>
-      </div>
+      <div class="uk-top uk2-top" aria-hidden="true"><svg class="uk2-inst" viewBox="19 0 574 150" aria-hidden="true"><defs><linearGradient id="ukb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A2C52"/><stop offset="1" stop-color="#1E1736"/></linearGradient></defs><g class="uk2-body"><circle cx="410" cy="75" r="50"/><circle cx="510" cy="75" r="64"/><rect x="410" y="33" width="100" height="84"/></g><path class="uk2-outline" d="M410 25 A50 50 0 0 0 410 125 C440 125 455 139 510 139 A64 64 0 0 0 510 11 C455 11 440 25 410 25 Z"/><circle class="uk2-hole" cx="420" cy="75" r="19"/><circle class="uk2-ring" cx="420" cy="75" r="25"/><rect class="uk2-bridge" x="522" y="52" width="14" height="46" rx="4"/><rect class="uk2-neck" x="118" y="58" width="282" height="34" rx="3"/><line class="uk2-fret" x1="166" y1="58" x2="166" y2="92"/><line class="uk2-fret" x1="210.2" y1="58" x2="210.2" y2="92"/><line class="uk2-fret" x1="250.8" y1="58" x2="250.8" y2="92"/><line class="uk2-fret" x1="288.2" y1="58" x2="288.2" y2="92"/><line class="uk2-fret" x1="322.6" y1="58" x2="322.6" y2="92"/><line class="uk2-fret" x1="354.2" y1="58" x2="354.2" y2="92"/><line class="uk2-fret" x1="383.3" y1="58" x2="383.3" y2="92"/><circle class="uk2-dot" cx="230.5" cy="75" r="4"/><circle class="uk2-dot" cx="305.4" cy="75" r="4"/><rect class="uk2-nut" x="114" y="56" width="6" height="38" rx="2"/><path class="uk2-head" d="M114 54 L114 96 L40 104 Q22 104 22 86 L22 64 Q22 46 40 46 Z"/><g class="uk2-peg"><rect x="47" y="38" width="6" height="12" fill="#C9C3E8"/><rect class="uk2-key" x="38" y="24" width="24" height="16" rx="7"/></g><circle class="uk2-post" cx="50" cy="60" r="5"/><g class="uk2-peg"><rect x="85" y="38" width="6" height="12" fill="#C9C3E8"/><rect class="uk2-key" x="76" y="24" width="24" height="16" rx="7"/></g><circle class="uk2-post" cx="88" cy="60" r="5"/><g class="uk2-peg"><rect x="47" y="102" width="6" height="12" fill="#C9C3E8"/><rect class="uk2-key" x="38" y="110" width="24" height="16" rx="7"/></g><circle class="uk2-post" cx="50" cy="90" r="5"/><g class="uk2-peg"><rect x="85" y="102" width="6" height="12" fill="#C9C3E8"/><rect class="uk2-key" x="76" y="110" width="24" height="16" rx="7"/></g><circle class="uk2-post" cx="88" cy="90" r="5"/><line class="uk2-str s0" x1="50" y1="60" x2="116" y2="64"/><line class="uk2-str v s0" x1="116" y1="64" x2="529" y2="64"/><line class="uk2-str s1" x1="88" y1="60" x2="116" y2="71"/><line class="uk2-str v s1" x1="116" y1="71" x2="529" y2="71"/><line class="uk2-str s2" x1="88" y1="90" x2="116" y2="79"/><line class="uk2-str v s2" x1="116" y1="79" x2="529" y2="79"/><line class="uk2-str s3" x1="50" y1="90" x2="116" y2="86"/><line class="uk2-str v s3" x1="116" y1="86" x2="529" y2="86"/></svg></div>
       <div class="uk-face">
        <span class="uk-sun" aria-hidden="true"></span>
        <span class="badge" aria-hidden="true">guitar <b>studies</b></span>
